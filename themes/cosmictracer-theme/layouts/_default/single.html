@@ -1,6 +1,11 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<div class="content-body">
-{{ .Content }}
-</div>
+<article class="page-content" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+
+  <h1>{{ .Title }}</h1>
+
+  <div class="content-body" style="margin-top: 20px; line-height: 1.7; font-size: 1.1rem;">
+    {{ .Content }}
+  </div>
+
+</article>
 {{ end }}
