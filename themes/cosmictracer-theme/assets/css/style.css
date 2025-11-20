@@ -22,6 +22,29 @@
     --accent-soft: #3b82f6;
     --accent-hover: #60a5fa;
   }
+
+  :root[data-theme="light"] .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #d6e0f2;
+  }
+  
+  :root[data-theme="light"] .site-nav a {
+    color: #475569;
+  }
+  
+  :root[data-theme="light"] .site-nav a:hover {
+    color: #1e40af;
+  }
+  
+  :root[data-theme="light"] .theme-toggle {
+    border-color: #cbd5e1;
+    color: #475569;
+  }
+  
+  :root[data-theme="light"] .site-title a {
+    color: #1e293b;
+  }
+  
   
   /* GLOBAL */
   
