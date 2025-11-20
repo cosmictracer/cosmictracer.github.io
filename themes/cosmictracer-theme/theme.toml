@@ -1,0 +1,15 @@
+title = "Cosmic Tracer Theme"
+author = "Cosmic Tracer"
+description = "Custom theme for Cosmic Tracer Hugo site"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+min_version = "0.128.0"
+
+
+[author]
+name = "CosmicTracer"
+homepage = "https://cosmictracer.com/"
+
+
+[params]
+# theme-level params (if needed)

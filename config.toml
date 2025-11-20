@@ -2,7 +2,9 @@ baseURL = "https://cosmictracer.com/"
 languageCode = "en-us"
 title = "CosmicTracer"
 theme = "cosmictracer-theme"
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [menu]
 
