@@ -1,0 +1,18 @@
+{{ $css := resources.Get "css/style.css" | resources.Fingerprint }}
+<link
+  rel="stylesheet"
+  href="{{ $css.RelPermalink }}"
+  integrity="{{ $css.Data.Integrity }}"
+/>
+
+{{ with .Site.Params.description }}
+<meta name="description" content="{{ . }}" />
+{{ end }}
+
+{{ if .Site.Params.enableAds }}
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.adsenseID }}"
+  crossorigin="anonymous"
+></script>
+{{ end }}
