@@ -1,3 +1,27 @@
 <footer class="site-footer">
-    <p>© {{ now.Year }} CosmicTracer</p>
-</footer>
+
+    <div style="margin-bottom: 20px;">
+      <a href="https://www.youtube.com/@CosmicTracerBlog"
+         target="_blank"
+         style="margin-right: 15px;">
+        YouTube
+      </a>
+  
+      <!-- Instagram (ativar quando tiver) -->
+      <!-- <a href="https://instagram.com/cosmictracer" target="_blank" style="margin-right: 15px;">Instagram</a> -->
+  
+      <!-- TikTok (ativar quando tiver) -->
+      <!-- <a href="https://tiktok.com/@cosmictracer" target="_blank" style="margin-right: 15px;">TikTok</a> -->
+    </div>
+  
+    <div style="margin-bottom: 20px;">
+      <a href="/about/" style="margin-right: 20px;">About</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  
+    <div style="opacity: 0.7;">
+      © {{ now.Year }} {{ .Site.Title }}
+    </div>
+  
+  </footer>
+  

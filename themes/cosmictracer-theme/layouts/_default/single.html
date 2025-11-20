@@ -1,11 +1,9 @@
 {{ define "main" }}
 <article class="page-content">
+  <h1 class="page-title">{{ .Title }}</h1>
 
-  <h1>{{ .Title }}</h1>
-
-  <div class="content-body">
+  <div class="page-body">
     {{ .Content }}
   </div>
-
 </article>
 {{ end }}

@@ -1,25 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ .Title }} | Cosmic Tracer</title>
-{{ $css := resources.Get "css/style.css" }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>
+    {{ if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ .Title }} | {{ .Site.Title }}
+    {{ end }}
+  </title>
 
-{{ if .Site.Params.enableAds }}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.adsenseID }}" crossorigin="anonymous"></script>
-{{ end }}
+  {{ partial "head.html" . }}
 </head>
 <body>
-{{ partial "header.html" . }}
+  <div class="main-wrapper">
+    {{ partial "header.html" . }}
 
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
 
-<main>
-{{ block "main" . }}{{ end }}
-</main>
+    {{ partial "footer.html" . }}
+  </div>
 
-
-{{ partial "footer.html" . }}
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const stored = localStorage.getItem("ct-theme");
+      if (stored === "light" || stored === "dark") {
+        root.setAttribute("data-theme", stored);
+      }
+      window.toggleTheme = function () {
+        const current = root.getAttribute("data-theme") || "dark";
+        const next = current === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        localStorage.setItem("ct-theme", next);
+      };
+    })();
+  </script>
 </body>
 </html>

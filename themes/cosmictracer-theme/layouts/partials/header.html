@@ -1,9 +1,20 @@
 <header class="site-header">
-    <nav>
-    <ul>
-    {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-    {{ end }}
-    </ul>
-    </nav>
-</header>
+    <div class="site-header-inner">
+      <div class="site-title">
+        <a href="/">{{ .Site.Title }}</a>
+      </div>
+  
+      <nav class="site-nav">
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+  
+      <button class="theme-toggle" onclick="toggleTheme()">
+        Toggle theme
+      </button>
+    </div>
+  </header>
+  

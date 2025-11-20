@@ -7,7 +7,6 @@ theme = "cosmictracer-theme"
   pagerSize = 10
 
 [menu]
-
   [[menu.main]]
     name = "Home"
     url = "/"
