@@ -1,6 +1,121 @@
 {{ define "main" }}
-<section class="hero">
-<h1>CosmicTracer</h1>
-<p>Tracing the Wonders of the Universe</p>
+
+<!-- HERO SECTION -->
+<section class="hero"
+  style="
+    background: radial-gradient(circle at center, #1a2336 0%, #0a0f1a 100%);
+    padding: 120px 20px;
+    text-align: center;
+    color: #e8ecf7;
+  "
+>
+  <h1 style="font-size: 3rem; margin-bottom: 10px;">CosmicTracer</h1>
+  <p style="font-size: 1.3rem; opacity: 0.9;">
+    Tracing the Wonders of the Universe
+  </p>
+
+  <div style="margin-top: 40px;">
+    <a href="/about/"
+      style="
+        background: #4f7dff;
+        padding: 14px 26px;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: 0.2s;
+      "
+      onmouseover="this.style.opacity='0.85'"
+      onmouseout="this.style.opacity='1'"
+    >Learn More</a>
+  </div>
 </section>
+
+<!-- FEATURE GRID -->
+<section style="max-width: 1000px; margin: 60px auto; padding: 0 20px;">
+
+  <h2 style="text-align:center; margin-bottom:40px;">Explore the Cosmos</h2>
+
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    "
+  >
+
+    <div
+      style="
+        background: #111827;
+        padding: 25px;
+        border-radius: 10px;
+        color: #dce3f2;
+        box-shadow: 0 0 14px rgba(0,0,0,0.3);
+      "
+    >
+      <h3>Galaxies</h3>
+      <p>Discover majestic cosmic structures billions of light-years away.</p>
+    </div>
+
+    <div
+      style="
+        background: #111827;
+        padding: 25px;
+        border-radius: 10px;
+        color: #dce3f2;
+        box-shadow: 0 0 14px rgba(0,0,0,0.3);
+      "
+    >
+      <h3>Black Holes</h3>
+      <p>Explore the most extreme objects in the universe.</p>
+    </div>
+
+    <div
+      style="
+        background: #111827;
+        padding: 25px;
+        border-radius: 10px;
+        color: #dce3f2;
+        box-shadow: 0 0 14px rgba(0,0,0,0.3);
+      "
+    >
+      <h3>Deep Space</h3>
+      <p>Learn about the mysteries hidden beyond our own galaxy.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- LATEST POSTS -->
+<section style="max-width: 900px; margin: 80px auto; padding: 20px;">
+  <h2 style="text-align:center; margin-bottom:30px;">Latest Articles</h2>
+
+  {{ if .Site.RegularPages }}
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      {{ range first 5 .Site.RegularPages }}
+        <article
+          style="
+            background: #101622;
+            padding: 20px;
+            border-radius: 10px;
+            color: #d7dff0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+          "
+        >
+          <a href="{{ .RelPermalink }}"
+            style="color: #92b4ff; text-decoration:none; font-size:1.3rem;"
+          >
+            {{ .Title }}
+          </a>
+          <p style="margin-top:5px; opacity:0.7;">
+            {{ .Summary }}
+          </p>
+        </article>
+      {{ end }}
+    </div>
+  {{ else }}
+    <p style="text-align:center; opacity:0.7;">No posts yet. Content is coming soon!</p>
+  {{ end }}
+</section>
+
 {{ end }}
