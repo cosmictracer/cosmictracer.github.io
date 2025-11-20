@@ -1,27 +1,27 @@
-toml
 baseURL = "https://cosmictracer.com/"
-title = "Cosmic Tracer"
-theme = "cosmictracer-theme"
 languageCode = "en-us"
+title = "CosmicTracer"
+theme = "cosmictracer-theme"
 paginate = 10
 
-
 [menu]
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-[[menu.main]]
-name = "About"
-url = "/about/"
-weight = 2
-[[menu.main]]
-name = "Contact"
-url = "/contact/"
-weight = 3
 
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
 
 [params]
-description = "Tracing the Wonders of the Universe"
-enableAds = true
-adsenseID = "YOUR-ADSENSE-ID"
+  description = "Tracing the Wonders of the Universe"
+  enableAds = true
+  adsenseID = "YOUR-ADSENSE-ID"
