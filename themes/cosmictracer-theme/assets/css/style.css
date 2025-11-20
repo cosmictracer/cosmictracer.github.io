@@ -1,376 +1,187 @@
-/* THEME COLORS (CSS VARIABLES) */
+/* ===============================
+   ☆ COSMICTRACER FULL THEME V2 ☆
+   =============================== */
+
+/* COLORS — DARK + LIGHT VARIABLES */
 :root {
-    --bg-main: #0b1220;
+    --bg-main: #0a0f1a;
     --bg-elevated: #111a2e;
-    --bg-card: #101622;
+    --bg-card: #121a33;
     --border-subtle: #1f2a48;
     --text-main: #e6ecf5;
     --text-muted: #a3b1cf;
-    --accent: #4f7dff;
-    --accent-soft: #7ab4ff;
-    --accent-hover: #a2c9ff;
+    --accent: #5c7cff;
+    --accent-soft: #88a4ff;
+    --accent-hover: #b7caff;
+  
+    --glow-1: rgba(120, 150, 255, 0.18);
+    --glow-2: rgba(160, 200, 255, 0.12);
   }
   
   :root[data-theme="light"] {
     --bg-main: #f4f7ff;
     --bg-elevated: #ffffff;
     --bg-card: #ffffff;
-    --border-subtle: #d3ddf5;
-    --text-main: #101827;
-    --text-muted: #4b5563;
+    --border-subtle: #d1d9ee;
+    --text-main: #1e293b;
+    --text-muted: #475569;
     --accent: #2563eb;
     --accent-soft: #3b82f6;
     --accent-hover: #60a5fa;
-  }
-
-  :root[data-theme="light"] .site-header {
-    background: #ffffff;
-    border-bottom: 1px solid #d6e0f2;
+  
+    --glow-1: rgba(50, 90, 200, 0.06);
+    --glow-2: rgba(100, 150, 250, 0.05);
   }
   
-  :root[data-theme="light"] .site-nav a {
-    color: #475569;
+  /* TRANSITION SMOOTH ON THEME CHANGE */
+  * {
+    transition: background-color 0.35s linear,
+                color 0.35s linear,
+                border-color 0.35s linear,
+                box-shadow 0.35s linear;
   }
-  
-  :root[data-theme="light"] .site-nav a:hover {
-    color: #1e40af;
-  }
-  
-  :root[data-theme="light"] .theme-toggle {
-    border-color: #cbd5e1;
-    color: #475569;
-  }
-  
-  :root[data-theme="light"] .site-title a {
-    color: #1e293b;
-  }
-  
   
   /* GLOBAL */
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      sans-serif;
+    font-family: system-ui, sans-serif;
     background: var(--bg-main);
     color: var(--text-main);
+    overflow-x: hidden;
   }
   
-  a {
-    color: var(--accent-soft);
-    text-decoration: none;
-    transition: color 0.2s ease;
+  /* STARFIELD ANIMATION (only in DARK mode) */
+  :root[data-theme="dark"] body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: transparent url("data:image/svg+xml;utf8,<svg width='2' height='2' xmlns='http://www.w3.org/2000/svg'><circle cx='1' cy='1' r='1' fill='white' /></svg>") repeat;
+    opacity: 0.13;
+    animation: starScroll 90s linear infinite;
   }
   
-  a:hover {
-    color: var(--accent-hover);
-  }
-  
-  /* LAYOUT BASE */
-  
-  .main-wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1;
+  @keyframes starScroll {
+    from { background-position: 0 0; }
+    to { background-position: -2000px 2000px; }
   }
   
   /* HEADER */
-  
   .site-header {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(17, 26, 46, 0.96);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(14px);
+    background: rgba(10, 15, 30, 0.75);
     border-bottom: 1px solid var(--border-subtle);
+  }
+  
+  :root[data-theme="light"] .site-header {
+    background: rgba(255, 255, 255, 0.8);
   }
   
   .site-header-inner {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-  }
-  
-  .site-title a {
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    color: var(--text-main);
-  }
-  
-  .site-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 22px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .site-nav a {
-    font-size: 0.98rem;
-    color: var(--text-muted);
-  }
-  
-  .site-nav a:hover {
-    color: var(--accent-soft);
+    align-items: center;
   }
   
   .theme-toggle {
-    margin-left: 18px;
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    border-radius: 999px;
-    border: 1px solid var(--border-subtle);
     background: transparent;
-    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
+    padding: 8px 12px;
+    border-radius: 30px;
     cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
   }
   
-  /* FOOTER */
-  
-  .site-footer {
-    text-align: center;
-    padding: 30px 0 40px;
-    font-size: 0.9rem;
-    opacity: 0.75;
-    border-top: 1px solid var(--border-subtle);
+  .theme-toggle:hover {
+    transform: rotate(15deg);
   }
   
-  /* HERO (HOME) */
-  
+  /* HERO */
   .hero {
-    background: radial-gradient(circle at top, #1b2450 0%, var(--bg-main) 55%);
-    padding: 120px 20px 80px;
+    padding: 140px 20px 100px;
     text-align: center;
-  }
-  
-  .hero-inner {
-    max-width: 780px;
-    margin: 0 auto;
+    background: radial-gradient(circle at center, var(--glow-2) 0%, var(--bg-main) 75%);
   }
   
   .hero-title {
-    font-size: clamp(2.4rem, 3vw + 1.5rem, 3.2rem);
-    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: 700;
   }
   
   .hero-subtitle {
-    font-size: 1.2rem;
     color: var(--text-muted);
+    margin-top: 12px;
   }
   
-  .hero-actions {
-    margin-top: 35px;
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
+  /* BUTTONS */
   .btn-primary,
   .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 11px 22px;
-    border-radius: 999px;
-    font-size: 0.98rem;
+    padding: 12px 24px;
+    border-radius: 30px;
     font-weight: 500;
-    border: none;
     cursor: pointer;
-    transition: opacity 0.2s ease, transform 0.1s ease;
+    transition: 0.25s ease;
   }
   
   .btn-primary {
-    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    background: var(--accent);
     color: white;
+    border: none;
+    box-shadow: 0 4px 15px var(--glow-1);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-2);
   }
   
   .btn-secondary {
-    background: transparent;
     border: 1px solid var(--border-subtle);
     color: var(--text-muted);
   }
   
-  .btn-primary:hover,
   .btn-secondary:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
+    border-color: var(--accent-soft);
   }
   
-  /* SECTIONS GENERICAS */
-  
-  .section {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 0 20px 60px;
-  }
-  
-  .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 28px;
-    text-align: center;
-  }
-  
-  /* CARDS */
-  
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
-  }
-  
+  /* CARDS — floating cosmic cards */
   .card {
     background: var(--bg-card);
-    border-radius: 14px;
-    padding: 20px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.02);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-  }
-  
-  .card-title {
-    font-size: 1.15rem;
-    margin-bottom: 8px;
-  }
-  
-  .card-text {
-    font-size: 0.96rem;
-    color: var(--text-muted);
-  }
-  
-  /* POSTS NA HOME */
-  
-  .posts-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .post-card {
-    background: var(--bg-card);
     border-radius: 12px;
-    padding: 16px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 22px;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.22),
+                0px 0px 12px var(--glow-1);
+    transition: 0.25s ease;
   }
   
-  .post-card-title {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.28),
+                0px 0px 16px var(--glow-2);
   }
   
-  .post-card-excerpt {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-  }
-  
-  /* SINGLE PAGE (ABOUT, CONTACT, POSTS) */
-  
+  /* PAGE CONTENT */
   .page-content {
     max-width: 850px;
-    margin: 60px auto;
-    padding: 0 20px 40px;
+    margin: 70px auto;
+    padding: 0 20px 50px;
   }
   
   .page-title {
-    font-size: 2.2rem;
-    margin-bottom: 25px;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
   }
   
   .page-body p {
     line-height: 1.7;
-    margin-bottom: 18px;
-    color: var(--text-main);
-  }
-  
-  .page-body h2 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-    border-bottom: 1px solid var(--border-subtle);
-    padding-bottom: 6px;
-  }
-  
-  .page-body ul {
-    padding-left: 20px;
-    margin-bottom: 18px;
-  }
-  
-  /* FORMULÁRIO (CONTACT) */
-  
-  form {
-    max-width: 600px;
-  }
-  
-  label {
-    display: block;
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-  }
-  
-  input,
-  textarea {
-    width: 100%;
-    padding: 11px 13px;
-    margin-bottom: 18px;
-    border-radius: 8px;
-    border: 1px solid var(--border-subtle);
-    background: var(--bg-elevated);
-    color: var(--text-main);
-    font-size: 0.97rem;
-  }
-  
-  input:focus,
-  textarea:focus {
-    outline: none;
-    border-color: var(--accent-soft);
-    box-shadow: 0 0 0 1px rgba(79, 125, 255, 0.4);
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  /* LIST PAGES (seções) */
-  
-  .list-page {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 20px 40px;
-  }
-  
-  .list-page h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  /* RESPONSIVO */
-  
-  @media (max-width: 640px) {
-    .site-header-inner {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  
-    .site-nav ul {
-      gap: 12px;
-      font-size: 0.9rem;
-    }
-  
-    .hero {
-      padding-top: 90px;
-    }
   }
   

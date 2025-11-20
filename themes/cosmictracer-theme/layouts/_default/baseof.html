@@ -35,12 +35,15 @@
       function applyTheme(theme) {
         root.setAttribute("data-theme", theme);
         localStorage.setItem("ct-theme", theme);
-        icon.textContent = theme === "light" ? "🌞" : "🌙";
+  
+        icon.style.transform = "rotate(180deg)";
+        setTimeout(() => {
+          icon.textContent = theme === "light" ? "🌞" : "🌙";
+          icon.style.transform = "rotate(0deg)";
+        }, 150);
       }
   
       const stored = localStorage.getItem("ct-theme");
-  
-      // Default: dark
       applyTheme(stored === "light" ? "light" : "dark");
   
       window.toggleTheme = function () {
