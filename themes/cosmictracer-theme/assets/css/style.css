@@ -1,31 +1,121 @@
+/* GLOBAL */
 body {
     margin: 0;
-    font-family: Arial;
-    background: #0a0f1a;
-    color: white;
-}
-.site-header {
-    background: #0f1626;
-    padding: 12px;
-}
-.site-header ul {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1220;
+    color: #e6ecf5;
+  }
+  
+  a {
+    color: #7ab4ff;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  
+  a:hover {
+    color: #a2c9ff;
+  }
+  
+  /* HEADER */
+  .site-header {
+    background: #111a2e;
+    padding: 15px 25px;
+    border-bottom: 1px solid #1c2742;
+  }
+  
+  .site-header ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    padding: 0;
+    gap: 25px;
     margin: 0;
-}
-.site-header a {
-    color: white;
-    text-decoration: none;
-}
-.hero {
+    padding: 0;
+  }
+  
+  .site-header a {
+    color: #c9d6eb;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .site-header a:hover {
+    color: #ffffff;
+  }
+  
+  /* FOOTER */
+  .site-footer {
     text-align: center;
-    padding: 80px 20px;
-}
-.site-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 40px 0;
+    font-size: 0.9rem;
     opacity: 0.7;
-}
+  }
+  
+  /* SINGLE PAGE LAYOUT */
+  .page-content {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  
+  .page-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+  }
+  
+  .page-content h2 {
+    margin-top: 35px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #1f2a48;
+    padding-bottom: 8px;
+  }
+  
+  .page-content p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  /* LIST PAGE (if used) */
+  .list-page {
+    max-width: 850px;
+    margin: 40px auto;
+  }
+  
+  /* FORM ELEMENTS */
+  form {
+    max-width: 600px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    background: #111a2e;
+    border: 1px solid #2a3a5a;
+    border-radius: 6px;
+    color: #e6ecf5;
+    font-size: 1rem;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #67a2ff;
+    outline: none;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #4f7dff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    opacity: 0.85;
+  }
+  
+  
