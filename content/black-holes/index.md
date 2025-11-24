@@ -143,7 +143,7 @@ Their work turned theory into observation.
 
 Here is another historic observation — a black hole in our own galaxy:
 
-![Sagittarius A*](/images/black-holes/SagittariusAstar.webp)
+![Sagittarius A*](/images/black-holes/astar.jpeg)
 
 *Sagittarius A\*, the supermassive black hole at the center of the Milky Way (EHT Collaboration).*
 
