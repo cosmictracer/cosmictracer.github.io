@@ -48,21 +48,100 @@ Below is the real image of a **supermassive black hole**, captured in 2019:
 
 ## 👨‍🔬 Who Discovered Black Holes?
 
-Understanding black holes was a journey spanning centuries.
+Understanding black holes wasn’t the work of one person — it was a scientific journey spanning centuries.  
+Each scientist below added a crucial piece to the puzzle.
 
-### **1783 — John Michell**
-Proposed the idea of a “dark star” with gravity strong enough to trap light.
+---
 
-### **1915 — Albert Einstein**
-Published General Relativity — the theory predicting black holes mathematically.
+### 🧠 **1783 — John Michell**
 
-### **1916 — Karl Schwarzschild**
-Found the first exact solution to Einstein’s equations describing a black hole.
+John Michell was an English natural philosopher, geologist, astronomer, and arguably one of the most underrated scientists in history.
 
-### **1960s — John Wheeler**
-Popularized the term **“black hole”** and unified modern theoretical ideas.
+He was the **first person to ever propose the idea of a “dark star”** — a star so massive that not even light could escape its gravity.  
+This idea sounds exactly like a modern black hole, but he came up with it **over 130 years before Einstein**.
 
-### **2019 — First direct image**
+What makes Michell impressive:
+
+- He predicted gravitational lensing *centuries* before it was detected  
+- He invented the concept of stellar mass comparison  
+- He developed early theories on earthquakes and magnetism  
+- He worked entirely without modern physics or relativity  
+
+Most scientists ignored his idea because it sounded too strange for the time.  
+But today, Michell is recognized as the **first person in history to describe a black hole-like object**.
+
+---
+
+### 🧪 **1915 — Albert Einstein**
+
+Albert Einstein revolutionized physics with the publication of the **General Theory of Relativity**.  
+
+Relativity did two things:
+
+1. **Redefined gravity** not as a force, but as a curvature of spacetime  
+2. **Predicted black holes mathematically** — even though Einstein himself thought they were too bizarre to exist
+
+Einstein's contribution is foundational:
+
+- His equations showed that gravity could become infinitely strong  
+- He predicted gravitational time dilation  
+- He enabled the entire theoretical framework black holes rely on  
+- His work later made gravitational waves possible (detected in 2015)
+
+Even though Einstein didn’t believe black holes were physical objects, **his math made them unavoidable**.
+
+---
+
+### 📘 **1916 — Karl Schwarzschild**
+
+One year after Einstein published relativity, Karl Schwarzschild — a German physicist serving on the front lines of World War I — solved Einstein’s equations from inside the trenches.
+
+His solution described:
+
+- the first mathematically perfect black hole  
+- the **Schwarzschild radius**, the boundary we now call the event horizon  
+- how mass curves spacetime in a perfectly spherical object
+
+Schwarzschild’s work showed that black holes weren’t just theoretical quirks — they were built into the structure of the universe.
+
+Tragically, he died just months later from an autoimmune disease.  
+But his name remains attached to every non-rotating black hole ever studied.
+
+---
+
+### 🌌 **1960s — John Wheeler**
+
+John Wheeler was an American physicist who helped bring black holes into mainstream science.
+
+What Wheeler did:
+
+- Coined the term **“black hole”** in 1967  
+- Developed key theoretical concepts including wormholes and spacetime foam  
+- Mentored future legends like Richard Feynman and Kip Thorne  
+- Unified the physics community around Einstein’s ideas  
+
+Before Wheeler, black holes were seen as obscure, fringe solutions.  
+After Wheeler, they became **central objects in astrophysics**.
+
+He transformed the idea from “mathematical oddity” to **scientific reality**.
+
+Wheeler also helped promote the idea that black holes could shape galaxies and influence cosmic evolution — concepts widely accepted today.
+
+---
+
+### 🛰️ **2019 — Event Horizon Telescope Team**
+
+Although not a single person, the global collaboration of more than 200 scientists produced something historic:
+
+✔ the **first real image of a black hole (M87\*)**  
+✔ proof that event horizons behave exactly like relativity predicts  
+✔ the highest-resolution astrophysical image ever taken  
+
+In 2022, the team also imaged **Sagittarius A\***, the black hole at the center of the Milky Way.
+
+Their work turned theory into observation.
+
+---
 
 Here is another historic observation — a black hole in our own galaxy:
 
