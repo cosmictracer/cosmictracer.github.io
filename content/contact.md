@@ -22,27 +22,34 @@ Questions, collaboration ideas, suggestions — send us a message anytime.
   <label for="message">Message</label>
   <textarea id="message" name="message" rows="6" required></textarea>
 
-  <div class="g-recaptcha" data-sitekey="6Ld9aBYsAAAAAIXw7d8DK0qcKRD0ICGUNy_BSnhp" data-callback="onCaptchaSuccess"></div>
-  <input type="hidden" name="_captcha" id="captcha-response" required>
+  <!-- hidden token field -->
+  <input type="hidden" name="g-recaptcha-response" id="recaptcha-token">
 
   <button type="submit" class="btn-submit">Send Message</button>
-
 </form>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld9aBYsAAAAAIXw7d8DK0qcKRD0ICGUNy_BSnhp"></script>
 <script>
-  function onCaptchaSuccess(token) {
-    document.getElementById('captcha-response').value = token;
-  }
-  
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    const captchaValue = document.getElementById('captcha-response').value;
-    if (!captchaValue) {
+  const siteKey = "6Ld9aBYsAAAAAIXw7d8DK0qcKRD0ICGUNy_BSnhp";
+
+  grecaptcha.ready(function () {
+    grecaptcha.execute(siteKey, { action: "submit" }).then(function (token) {
+      document.getElementById("recaptcha-token").value = token;
+    });
+  });
+
+  // regenerate token every time user tries to submit
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    if (!document.getElementById("recaptcha-token").value) {
       e.preventDefault();
-      return false;
+      grecaptcha.execute(siteKey, { action: "submit" }).then(function (token) {
+        document.getElementById("recaptcha-token").value = token;
+        document.getElementById("contact-form").submit();
+      });
     }
   });
 </script>
+
 
 ---
 
