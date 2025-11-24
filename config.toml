@@ -27,3 +27,8 @@ theme = "cosmictracer-theme"
   enableAds = true
   adsenseID = "YOUR-ADSENSE-ID"
   googleAnalytics = "G-LK2FS07Q82"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
