@@ -311,35 +311,88 @@
   
   form {
     max-width: 600px;
+    margin: 30px 0;
   }
   
-  label {
-    display: block;
-    font-size: 0.95rem;
-    margin-bottom: 4px;
+  form label {
+    display: block !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 6px !important;
+    color: var(--text-main) !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
-  input,
-  textarea {
-    width: 100%;
-    padding: 11px 13px;
-    margin-bottom: 18px;
-    border-radius: 8px;
-    border: 1px solid var(--border-subtle);
-    background: var(--bg-elevated);
-    color: var(--text-main);
-    font-size: 0.97rem;
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="hidden"],
+  form textarea {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    margin-bottom: 20px !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--border-subtle) !important;
+    background: var(--bg-elevated) !important;
+    color: var(--text-main) !important;
+    font-size: 0.97rem !important;
+    font-family: inherit !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
-  input:focus,
-  textarea:focus {
+  form input[type="hidden"] {
+    display: none !important;
+  }
+  
+  form input:focus,
+  form textarea:focus {
     outline: none;
     border-color: var(--accent-soft);
-    box-shadow: 0 0 0 1px rgba(79, 125, 255, 0.4);
+    box-shadow: 0 0 0 2px rgba(79, 125, 255, 0.2);
   }
   
-  textarea {
+  form textarea {
     resize: vertical;
+    min-height: 120px;
+  }
+  
+  form .btn-submit,
+  form button[type="submit"] {
+    display: inline-block !important;
+    padding: 12px 28px !important;
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft)) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: opacity 0.2s ease, transform 0.1s ease !important;
+    margin-top: 10px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  form .btn-submit:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  form .btn-submit:active {
+    transform: translateY(0);
+  }
+  
+  form .g-recaptcha {
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  form .g-recaptcha iframe {
+    border-radius: 4px;
   }
   
   /* LIST PAGES (seções) */
