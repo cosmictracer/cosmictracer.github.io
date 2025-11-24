@@ -26,3 +26,4 @@ theme = "cosmictracer-theme"
   description = "Tracing the Wonders of the Universe"
   enableAds = true
   adsenseID = "YOUR-ADSENSE-ID"
+  googleAnalytics = "G-LK2FS07Q82"
