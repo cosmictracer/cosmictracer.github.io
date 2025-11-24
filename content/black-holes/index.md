@@ -5,8 +5,6 @@ cover: "https://cdn.pixabay.com/photo/2019/10/08/14/00/black-hole-4536815_1280.j
 description: "A clear and modern explanation of what black holes are, who discovered them, and how our scientific understanding evolved."
 ---
 
-# Black Holes: The Cosmic Monsters of Spacetime
-
 Black holes are some of the most mysterious and mind-bending objects in the universe. They warp space, slow down time, and hide entire worlds behind an invisible horizon.
 
 But despite sounding like pure science fiction, black holes are real — and astronomers study them every day.
@@ -20,7 +18,7 @@ This happens when an enormous amount of mass is compressed into a tiny volume, c
 
 Below is an artistic visualization of a black hole bending spacetime around it:
 
-![Artistic Black Hole Rendering](https://cdn.pixabay.com/photo/2017/03/04/20/48/black-hole-2112228_1280.jpg)
+![Artistic Black Hole Rendering](/images/black-holes/artistic.jpg)
 
 *Artist’s impression of a black hole’s gravitational distortion.*
 
@@ -40,7 +38,7 @@ Other types include:
 
 Below is the real image of a **supermassive black hole**, captured in 2019:
 
-![M87 Black Hole](https://cdn.pixabay.com/photo/2019/08/15/10/08/black-hole-4409452_1280.png)
+![M87 Black Hole](/images/black-holes/m87.webp)
 
 *The first real image of a black hole — M87\*, photographed by the Event Horizon Telescope.*
 
@@ -145,7 +143,7 @@ Their work turned theory into observation.
 
 Here is another historic observation — a black hole in our own galaxy:
 
-![Sagittarius A*](https://cdn.pixabay.com/photo/2022/05/15/10/14/black-hole-7195550_1280.png)
+![Sagittarius A*](/images/black-holes/SagittariusAstar.webp)
 
 *Sagittarius A\*, the supermassive black hole at the center of the Milky Way (EHT Collaboration).*
 
